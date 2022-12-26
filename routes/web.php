@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserDetailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('main');
 });
+
+
+
+Route::resource('user-details', \App\Http\Controllers\UserDetailController::class);
+
+Route::resource('user-detail', 'UserDetailController')->middleware('auth');
+
+

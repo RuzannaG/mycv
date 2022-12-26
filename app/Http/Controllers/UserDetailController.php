@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\UserDetail;
 use Illuminate\Http\Request;
 
 class UserDetailController extends Controller
@@ -24,7 +23,7 @@ class UserDetailController extends Controller
      */
     public function create()
     {
-        return view('user_detali.create');
+        return view("user_detail.create");
     }
 
     /**
@@ -41,10 +40,10 @@ class UserDetailController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\UserDetail  $userDetail
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(UserDetail $userDetail)
+    public function show($id)
     {
         //
     }
@@ -52,10 +51,10 @@ class UserDetailController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\UserDetail  $userDetail
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(UserDetail $userDetail)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +63,10 @@ class UserDetailController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\UserDetail  $userDetail
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, UserDetail $userDetail)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +74,10 @@ class UserDetailController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\UserDetail  $userDetail
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(UserDetail $userDetail)
+    public function destroy($id)
     {
         //
     }
